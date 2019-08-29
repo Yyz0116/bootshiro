@@ -154,4 +154,7 @@
       UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+  <select id="findResourceById" parameterType="String">
+    SELECT * FROM auth_resource WHERE id=#{id}
+  </select>
 </mapper>
